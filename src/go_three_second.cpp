@@ -13,20 +13,45 @@ int main(int argc, char **argv)
   int count = 0;
   ros::Rate rate(CLOCK_SPEED);
 
+  // Make the robot stop (robot perhaps has a speed already)
+  msg.linear.x = 0;
+  msg.linear.y = 0;
+  msg.linear.z = 0;
+  msg.angular.x = 0;
+  msg.angular.y = 0;
+  msg.angular.z = 0;
+  pub.publish(msg);
+
   while(ros::ok() && count<MOVE_TIME/CLOCK_SPEED + 1)
     {
-      msg.linear.x = BASE_SPEED;
-      pub.publish(msg);
+      if (count == 0 || count == 1)
+	{
+	    msg.linear.x = BASE_SPEED;
+	    pub.publish(msg);
+	}
       ROS_INFO_STREAM("The robot is now moving forward!");
       count++;
       ros::spinOnce();
       rate.sleep();
-    }
+   }
   
   // make the robot stop
+  for (int i = 0; i < 2; i++)
+    {  
+
+      msg.linear.x = 0;
+      msg.linear.y = 0;
+      msg.linear.z = 0;
+      pub.publish(msg);
+
+    }
+    ROS_INFO_STREAM("The robot finished moving forward three seconds!");
+    
+    // Guard, make sure the robot stops.
+    rate.sleep();
     msg.linear.x = 0;
     msg.linear.y = 0;
     msg.linear.z = 0;
-    pub.publish(msg);
-    ROS_INFO_STREAM("The robot finished moving forward three seconds!");
+    pub.publish(msg); 
+
 }
