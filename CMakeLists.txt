@@ -107,6 +107,7 @@ include_directories(
 add_executable(go_three_second src/go_three_second.cpp)
 add_executable(spin_anticlockwise src/spin_anticlockwise.cpp)
 add_executable(spin_clockwise src/spin_clockwise.cpp)
+add_executable(teleop src/teleop.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -122,6 +123,10 @@ target_link_libraries(spin_anticlockwise
 )
 
 target_link_libraries(spin_clockwise 
+   ${catkin_LIBRARIES}
+)
+
+target_link_libraries(teleop 
    ${catkin_LIBRARIES}
 )
 
