@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "Spin_Clockwise");
+  ros::init(argc, argv, "Spin_Counter_Clockwise");
   ros::NodeHandle nh;
   
   ros::Publisher pub = nh.advertise<geometry_msgs::Twist>("RosAria/cmd_vel", 1000);
@@ -22,21 +22,19 @@ int main(int argc, char **argv)
   msg.angular.z = 0;
   pub.publish(msg);
 
-
-
   while(ros::ok() && count<MOVE_TIME/CLOCK_SPEED + 1)
     {
       // Spin PI/4
       if (count == 0 || count == 1)
 	{
-	  msg.angular.z = -1 * 2 * PI/ int(MOVE_TIME/CLOCK_SPEED) / 4;
+	  msg.angular.z = 2 * PI/ int(MOVE_TIME/CLOCK_SPEED) / 4;
 	  pub.publish(msg);
 	}
-      ROS_INFO_STREAM("The robot is now spinning clockwise!");
+      ROS_INFO_STREAM("The robot is now spinning counter_clockwise!");
       count++;
       ros::spinOnce();
       rate.sleep();
-    }
+    }    
 
     // Stop the spin
   for(int i = 0; i < 2; i++)
@@ -46,12 +44,12 @@ int main(int argc, char **argv)
       msg.angular.z = 0;
       pub.publish(msg);
     }
-   ROS_INFO_STREAM("The robot finished spinning 90 degrees!");
-   
-   // Guard, make sure the robot stops
-   rate.sleep();
-   msg.linear.x = 0;
-   msg.linear.y = 0;
-   msg.linear.z = 0;
-   pub.publish(msg);
+    ROS_INFO_STREAM("The robot finished spinning 90 degrees!");
+    
+    //Guard, make sure the robot stops
+    rate.sleep();
+    msg.linear.x = 0;
+    msg.linear.y = 0;
+    msg.linear.z = 0;
+    pub.publish(msg);
 }
