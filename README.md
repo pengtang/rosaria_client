@@ -13,3 +13,6 @@ Add print_state function(could print part of the info right now, need to be enha
 
 Beta V1.3 (Apr. 10)
 Pushed some small corrections to spin_clockwise, renamed spin_anticlockwise to spin_counterclockwise and added small corrections to that as well.  Also added (cery) rough draft of interface program. 
+
+Beta V1.4 (Apr. 10)
+Change the spin from 180 to 90 degree, finished the print_state function.
