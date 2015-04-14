@@ -110,6 +110,7 @@ add_executable(spin_clockwise src/spin_clockwise.cpp)
 add_executable(teleop src/teleop.cpp)
 add_executable(print_state src/print_state.cpp)
 add_executable(interface src/interface.cpp)
+add_executable(enable_motors src/enable_motors.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -137,6 +138,10 @@ target_link_libraries(print_state
 )
 
 target_link_libraries(interface
+  ${catkin_LIBRARIES}
+  )
+
+target_link_libraries(enable_motors
   ${catkin_LIBRARIES}
   )
 
