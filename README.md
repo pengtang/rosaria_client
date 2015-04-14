@@ -16,3 +16,6 @@ Pushed some small corrections to spin_clockwise, renamed spin_anticlockwise to s
 
 Beta V1.4 (Apr. 10)
 Change the spin from 180 to 90 degree, finished the print_state function.
+
+Beta V1.5 (Apr. 14)
+Add function enable_motors, fix the printing information about the front_motors and rear_motors state. 

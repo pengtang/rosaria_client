@@ -25,13 +25,19 @@ void bumperStateMessageReceived(const rosaria::BumperState &msg)
 //    	ROS_INFO_STREAM("The front bumpers are "<<msg.front_bumpers<<std::endl<<"The rear bumpers are "<<msg.rear_bumpers);
     	front_size = sizeof(msg.front_bumpers) / sizeof(bool);
     	rear_size = sizeof(msg.rear_bumpers) / sizeof(bool);
-    	ROS_INFO_STREAM("The front bumpers state are ");
+    	ROS_INFO_STREAM("The front bumpers state are('1' means good): ");
     	for (int i=0;i<front_size;i++)
-    		std::cout<<msg.front_bumpers[i]<<' ';
+	  if (msg.front_bumpers[i])
+    	    std::cout<<'1';
+	  else
+	    std::cout<<'0';
     	std::cout<<std::endl;
-    	ROS_INFO_STREAM("The rear bumpers state are ");
+    	ROS_INFO_STREAM("The rear bumpers state are('1' means good): ");
     	for (int i=0;i<rear_size;i++)
-    		std::cout<<msg.rear_bumpers[i]<<' ';	
+	  if (msg.rear_bumpers[i])
+	    std::cout<<'1';
+	  else
+	    std::cout<<'0';
     	std::cout<<std::endl;
     	bumper_msg_count++;
     }
