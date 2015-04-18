@@ -3,6 +3,7 @@
 #include <signal.h>
 #include <termios.h>
 #include <stdio.h>
+#define KEYCODE_SPC 0x20
 #define KEYCODE_R 0x43
 #define KEYCODE_L 0x44
 #define KEYCODE_U 0x41
@@ -59,7 +60,7 @@ void TeleopRosAria::keyLoop()
   puts("Reading from keyboard");
   puts("---------------------------");
   puts("Use arrow keys to move the robot.");
-  puts("Press Q to stop the robot.");
+  puts("Press the space bar to stop the robot.");
   for(;;)
     {
       // get the next event from the keyboard
@@ -96,12 +97,16 @@ void TeleopRosAria::keyLoop()
 	  angular_ = 0;
 	  dirty = true;
 	  break;
-	case KEYCODE_Q:
+	case KEYCODE_SPC:
 	  ROS_DEBUG("STOP");
 	  linear_ = 0;
 	  angular_ = 0;
 	  dirty = true;
 	  break;
+  case KEYCODE_Q:
+    ROS_DEBUG("QUIT");
+    quit(1);
+    break;
 	}
       geometry_msgs::Twist twist;
       twist.angular.z = a_scale_*angular_;

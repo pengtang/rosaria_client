@@ -17,24 +17,25 @@ int main(int argc, char **argv)
   ros::NodeHandle nh;
 
   std::cout  << "******************************************************************" << std::endl
-	     << "*                   ROSARIA CLIENT INTERFACE                     *" << std::endl
-	     << "*                                                                *" << std::endl
-	     << "*            Welcome to the RosAria client interface!            *" << std::endl
-	     << "*                                                                *" << std::endl
-	     << "*       [1] go_three_second                                      *" << std::endl
-	     << "*       [2] spin_clockwise                                       *" << std::endl
-	     << "*       [3] spin_counterclockwise                                *" << std::endl
-	     << "*       [4] teleop                                               *" << std::endl
-	     << "*       [5] print_state                                          *" << std::endl
-	     << "*       Press [Q] to close the interface                         *" << std::endl 
-	     << "******************************************************************" << std::endl;
+	         << "*                   ROSARIA CLIENT INTERFACE                     *" << std::endl
+	         << "*                                                                *" << std::endl
+	         << "*            Welcome to the RosAria client interface!            *" << std::endl
+	     	 << "*                                                                *" << std::endl
+	     	 << "*       [1] go_three_second                                      *" << std::endl
+	         << "*       [2] spin_clockwise                                       *" << std::endl
+	         << "*       [3] spin_counterclockwise                                *" << std::endl
+	         << "*       [4] teleop                                               *" << std::endl
+	         << "*       [5] print_state                                          *" << std::endl
+	         << "*       Press [Q] to close the interface                         *" << std::endl 
+	         << "******************************************************************" << std::endl;
 
   char select,a;
 
   while(ros::ok()){
+  	std::cout << "Please select a program to run, or hit q to quit: ";
     std::cin >> select;	
     switch(select)
-      {
+    {
       case KEYCODE_1:
 	a = system("rosrun rosaria_client go_three_second");
 	break;
@@ -55,7 +56,7 @@ int main(int argc, char **argv)
 	break;
       default:
 	std::cout << "Please enter a number from the list or Q to quit." << std::endl;
-      }
+    }
   }
   return 1;
 }
