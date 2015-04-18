@@ -12,4 +12,6 @@ Beta V1.4 (Apr. 10) Change the spin from 180 to 90 degree, finished the print_st
 
 Beta V1.5 (Apr. 14) Add function enable_motors, fix the printing information about the front_motors and rear_motors state.
 
-Beta V1.6(Apr 16) Added a functional version of the interface 
+Beta V1.6 (Apr 16) Added a functional version of the interface 
+
+Beta V1.7 (Apr 18) Changed stop key to spacebar in teleop, where the user now hits 'q' to quit.  Also edited interface to prompt user for inputs every time its ready for a selection
