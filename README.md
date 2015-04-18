@@ -1,6 +1,7 @@
 This is the rosaria client
 
-**************************ROSARIA CLIENT USAGE***************************
+*************************************************ROSARIA CLIENT USAGE**********************************************************
+
 Prerequisite: catkin workspace is setup, and use "git clone https://github.com/pengtang/rosaria_client.git" under the directory of catkin_ws/src. Then, under catkin_ws directory type "catkin_make" to compile and make executable files. Last, still under catkin_ws, type "source devel/setup.bash".
 
 Step 1. If you are operating with a real robot, look at Case 1, if you are using the mobilesim, look at Case 2.
