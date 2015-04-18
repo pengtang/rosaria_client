@@ -1,4 +1,5 @@
 This is the rosaria client
+
 **************************ROSARIA CLIENT USAGE***************************
 Prerequisite: catkin workspace is setup, and use "git clone https://github.com/pengtang/rosaria_client.git" under the directory of catkin_ws/src. Then, under catkin_ws directory type "catkin_make" to compile and make executable files. Last, still under catkin_ws, type "source devel/setup.bash".
 
@@ -11,6 +12,7 @@ Step 2. Open a terminal with three tabs. Do this sequentially: The first tab typ
 Step 3. Follow the instruction in the interface program, run the program respectively.
 
 Notice: launch file will be added shortly. 
+
 Update date: Apr. 18
 *************************************************************************
 
