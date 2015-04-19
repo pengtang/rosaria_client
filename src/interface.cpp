@@ -16,19 +16,19 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "RosAria_interface");
 	ros::NodeHandle nh;
 
-	std::cout  << "******************************************************************" << std::endl
-	<< "*                   ROSARIA CLIENT INTERFACE                     *" << std::endl
-	<< "*                                                                *" << std::endl
-	<< "*            Welcome to the RosAria client interface!            *" << std::endl
-	<< "*                                                                *" << std::endl
-	<< "*       [1] go_three_second                                      *" << std::endl
-	<< "*       [2] spin_clockwise                                       *" << std::endl
-	<< "*       [3] spin_counterclockwise                                *" << std::endl
-	<< "*       [4] teleop                                               *" << std::endl
-	<< "*       [5] print_state                                          *" << std::endl
-	<< "*       [6] enable_motors                                        *" << std::endl
-	<< "*       Press [Q] to close the interface                         *" << std::endl 
-	<< "******************************************************************" << std::endl;
+	std::cout  	<< "******************************************************************" << std::endl
+				<< "*                   ROSARIA CLIENT INTERFACE                     *" << std::endl
+				<< "*                                                                *" << std::endl
+				<< "*            Welcome to the RosAria client interface!            *" << std::endl
+				<< "*                                                                *" << std::endl
+				<< "*       [1] go_three_second                                      *" << std::endl
+				<< "*       [2] spin_clockwise                                       *" << std::endl
+				<< "*       [3] spin_counterclockwise                                *" << std::endl
+				<< "*       [4] teleop                                               *" << std::endl
+				<< "*       [5] print_state                                          *" << std::endl
+				<< "*       [6] enable_motors                                        *" << std::endl
+				<< "*       Press [Q] to close the interface                         *" << std::endl 
+				<< "******************************************************************" << std::endl;
 
 	char select,a;
 
