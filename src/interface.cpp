@@ -51,6 +51,7 @@ int main(int argc, char **argv)
 				break;
 			case KEYCODE_5:
 				a = system("rosrun rosaria_client print_state");
+				break;
 			case KEYCODE_6:
 				a = system("rosrun rosaria_client enable_motors");
 				break;
