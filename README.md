@@ -1,6 +1,6 @@
 This is the rosaria client
 
-*************************************************ROSARIA CLIENT USAGE**********************************************************
+*******************************************ROSARIA CLIENT USAGE*****************************************************
 
 Prerequisite: catkin workspace is setup, and use "git clone https://github.com/pengtang/rosaria_client.git" under the directory of catkin_ws/src. Then, under catkin_ws directory type "catkin_make" to compile and make executable files. Last, still under catkin_ws, type "source devel/setup.bash".
 
@@ -34,3 +34,5 @@ Beta V1.5 (Apr. 14) Add function enable_motors, fix the printing information abo
 Beta V1.6 (Apr 16) Added a functional version of the interface 
 
 Beta V1.7 (Apr 18) Changed stop key to spacebar in teleop, where the user now hits 'q' to quit.  Also edited interface to prompt user for inputs every time its ready for a selection
+
+Beta V1.8 (Apr. 20) Add launch file for rosaria_client
