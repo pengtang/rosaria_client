@@ -17,7 +17,7 @@ void initTermios(int echo) {
     tcgetattr(0, &old); /* grab old terminal i/o settings */
     new1 = old; /* make new settings same as old settings */
     new1.c_lflag &= ~ICANON; /* disable buffered i/o */
-	 	new1.c_lflag &= echo ? ECHO : ~ECHO; /* set echo mode */
+    new1.c_lflag &= echo ? ECHO : ~ECHO; /* set echo mode */
     tcsetattr(0, TCSANOW, &new1); /* use these new terminal i/o settings now */
 }
 
@@ -38,18 +38,18 @@ int main(int argc, char **argv)
 
   /* greet user and display selection options */
 	std::cout  	<< "******************************************************************" << std::endl
-							<< "*                   ROSARIA CLIENT INTERFACE                     *" << std::endl
-							<< "*                                                                *" << std::endl
-							<< "*            Welcome to the RosAria client interface!            *" << std::endl
-							<< "*                                                                *" << std::endl
-							<< "*       [1] go_three_second                                      *" << std::endl
-							<< "*       [2] spin_clockwise                                       *" << std::endl
-							<< "*       [3] spin_counterclockwise                                *" << std::endl
-							<< "*       [4] teleop                                               *" << std::endl
-							<< "*       [5] print_state                                          *" << std::endl
-							<< "*       [6] enable_motors                                        *" << std::endl
-							<< "*       Press [Q] to close the interface                         *" << std::endl 
-							<< "******************************************************************" << std::endl;
+			<< "*                   ROSARIA CLIENT INTERFACE                     *" << std::endl
+			<< "*                                                                *" << std::endl
+			<< "*            Welcome to the RosAria client interface!            *" << std::endl
+			<< "*                                                                *" << std::endl
+			<< "*       [1] go_three_second                                      *" << std::endl
+			<< "*       [2] spin_clockwise                                       *" << std::endl
+			<< "*       [3] spin_counterclockwise                                *" << std::endl
+			<< "*       [4] teleop                                               *" << std::endl
+			<< "*       [5] print_state                                          *" << std::endl
+			<< "*       [6] enable_motors                                        *" << std::endl
+			<< "*       Press [Q] to close the interface                         *" << std::endl 
+			<< "******************************************************************" << std::endl;
 
 	char select,a; /* vars to be used in switch statement */
 
