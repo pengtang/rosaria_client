@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "Move_forward_3_sec");
+  ros::init(argc, argv, "go_three_second");
   ros::NodeHandle nh;
   
   ros::Publisher pub = nh.advertise<geometry_msgs::Twist>("RosAria/cmd_vel", 1000);
