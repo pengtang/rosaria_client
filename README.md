@@ -40,3 +40,5 @@ Beta V1.6 (Apr 16) Added a functional version of the interface
 Beta V1.7 (Apr 18) Changed stop key to spacebar in teleop, where the user now hits 'q' to quit.  Also edited interface to prompt user for inputs every time its ready for a selection
 
 Beta V1.8 (Apr. 20) Add launch file for rosaria_client
+
+Beta V1.9 (Apr. 30) Added print_state feature, documentation 
