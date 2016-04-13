@@ -1,4 +1,5 @@
-This is the rosaria client
+#This is the [Rosaria](http://wiki.ros.org/ROSARIA) Demo Client
+This package is a series of simple demos meant to demonstrate how the robot is controlled in both ROS and Mobile Robots's [Aria](http://robots.mobilerobots.com/wiki/ARIA) 
 
 # Usage
 
