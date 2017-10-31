@@ -22,6 +22,19 @@ Step 3. Follow the instruction in the interface program, run the programs from t
 Update date: Apr. 20
 *************************************************************************
 
+# Commands
+
+* Up Arrow: Move forward
+* Down Arrow: Move backward
+* Left Arrow: Turn counter-clockwise
+* Right Arrow: Turn clockwise
+* Spacebar: Stop moving
+* A: Increase linear velocity
+* Z: Decrease linear velocity
+* S: Increase angular velocity
+* X: Decrease angular velocity
+* Q: Quit teleop 
+
 # Update Log
 
 Beta V1.0 Most of the time it works fine, sometimes it does not stop(continue going ahead or continue spinning).
